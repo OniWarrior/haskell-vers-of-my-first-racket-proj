@@ -35,6 +35,10 @@ subNineFromTen x = 10 - x
 main :: IO ()
 main =
   do
+    -- Test case for divisibleByX
     putStrLn "Is 15 divisible by x (5) :"
-
     print (yDivByX divisibleByX 15)
+
+    -- Test cases for function-9
+    putStrLn "Result when nine is added to five: "
+    print (funcNine addNineToFive)
