@@ -1,4 +1,5 @@
 module Main (main) where
+import qualified Control.Applicative as map
 
 -- Author: Stephen Aranda
 -- File  : myFirstRacketInHaskell.hs
@@ -30,6 +31,17 @@ addNineToFive x = x + 5 -- Function definition of test case function
 -- function for test case of function-9
 subNineFromTen :: Integer -> Integer -- Function declaration of test case function
 subNineFromTen x = 10 - x
+
+
+---------------------------------------------------------------------------------
+
+-------------my-map: duplicates the functionality of map.
+-------------Will accept a function that performs operation on individual
+-------------elements of the parameter list sent into it.
+-------------Then load it into a new list.
+
+addNum :: Integer -> Integer            --Function declaration of helper function
+addNum x = x + x                        -- Function definition of helper function.
 
 -- Entry point for test cases of all functions that will be demonstrated
 main :: IO ()
