@@ -39,6 +39,13 @@ main =
     putStrLn "Is 15 divisible by x (5) :"
     print (yDivByX divisibleByX 15)
 
+    putStrLn "----------------------------"
+
+    putStrLn "Is 13 divisible by x (5) :"
+    print (yDivByX divisibleByX 13)
+
+    putStrLn "--------------------------------------"
+
     -- Test cases for function-9
     putStrLn "Result when nine is added to five: "
     print (funcNine addNineToFive)
