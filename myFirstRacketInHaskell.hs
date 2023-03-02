@@ -20,8 +20,12 @@ divisibleByX y x = (y `mod` x) == 0 -- function definition for divisibleByX
 ------------as an argument and that function takes an integer(specifically 9) and applies it
 ------------to some operation occurring within that function
 
-funcNine :: (Integer -> Integer) -> Integer
-funcNine func = func 9
+funcNine :: (Integer -> Integer) -> Integer -- Function declaration of function-9
+funcNine func = func 9 -- Function definition of function-9
+
+-- function for test case of function-9
+addNineToFive :: Integer -> Integer -- Function declaration of test case function
+addNineToFive x = x + 5 -- Function definition of test case function
 
 -- Entry point for test cases of all functions that will be demonstrated
 main :: IO ()
