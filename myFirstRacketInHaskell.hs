@@ -42,3 +42,6 @@ main =
     -- Test cases for function-9
     putStrLn "Result when nine is added to five: "
     print (funcNine addNineToFive)
+
+    putStrLn "Result when 9 is subtracted from ten: "
+    print (funcNine subNineFromTen)
