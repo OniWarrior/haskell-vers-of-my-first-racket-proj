@@ -27,6 +27,10 @@ funcNine func = func 9 -- Function definition of function-9
 addNineToFive :: Integer -> Integer -- Function declaration of test case function
 addNineToFive x = x + 5 -- Function definition of test case function
 
+-- function for test case of function-9
+subNineFromTen :: Integer -> Integer -- Function declaration of test case function
+subNineFromTen x = 10 - x
+
 -- Entry point for test cases of all functions that will be demonstrated
 main :: IO ()
 main =
