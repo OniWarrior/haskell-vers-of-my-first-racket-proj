@@ -1,5 +1,7 @@
 module Main (main) where
 
+import Data.Dynamic (Dynamic, toDyn)
+
 -- Author: Stephen Aranda
 -- File  : myFirstRacketInHaskell.hs
 -- Date  : 3/1/23
@@ -45,6 +47,9 @@ myMap func [] = []
 addNum :: Integer -> Integer -- Function declaration of helper function
 addNum x = x + x -- Function definition of helper function.
 
+raiseToPowOfTwo :: Integer -> Integer -- Function declaration of helper function
+raiseToPowOfTwo x = x * x -- Function definition of helper function.
+
 -- Entry point for test cases of all functions that will be demonstrated
 main :: IO ()
 main =
@@ -72,3 +77,6 @@ main =
     -- test cases for my-map
     putStrLn "Here's a new list of ints generated from given list [1,2,3]"
     print (myMap addNum [1, 2, 3])
+
+    putStrLn "Here's a new list of ints generated from given list [1,2,6,5]"
+    print (myMap raiseToPowOfTwo [1, 2, 6, 5])
