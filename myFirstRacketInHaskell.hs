@@ -1,5 +1,4 @@
 module Main (main) where
-import qualified Control.Applicative as map
 
 -- Author: Stephen Aranda
 -- File  : myFirstRacketInHaskell.hs
@@ -32,7 +31,6 @@ addNineToFive x = x + 5 -- Function definition of test case function
 subNineFromTen :: Integer -> Integer -- Function declaration of test case function
 subNineFromTen x = 10 - x
 
-
 ---------------------------------------------------------------------------------
 
 -------------my-map: duplicates the functionality of map.
@@ -40,8 +38,12 @@ subNineFromTen x = 10 - x
 -------------elements of the parameter list sent into it.
 -------------Then load it into a new list.
 
-addNum :: Integer -> Integer            --Function declaration of helper function
-addNum x = x + x                        -- Function definition of helper function.
+myMap :: (Integer -> Integer) -> [Integer] -> [Integer] -- Function declaration
+myMap func (x : xs) = func x : myMap func xs
+myMap func [] = []
+
+addNum :: Integer -> Integer -- Function declaration of helper function
+addNum x = x + x -- Function definition of helper function.
 
 -- Entry point for test cases of all functions that will be demonstrated
 main :: IO ()
@@ -64,3 +66,9 @@ main =
 
     putStrLn "Result when 9 is subtracted from ten: "
     print (funcNine subNineFromTen)
+
+    putStrLn "---------------------------------------"
+
+    -- test cases for my-map
+    putStrLn "Here's a new list of ints generated from given list [1,2,3]"
+    print (myMap addNum [1, 2, 3])
